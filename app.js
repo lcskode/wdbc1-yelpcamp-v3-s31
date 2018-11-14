@@ -2,7 +2,13 @@ var express     = require("express"),
     app         = express(),
     bodyParser  = require("body-parser"),
     mongoose    = require("mongoose"),
-    Campground  = require("./models/campground");
+    // Use campground schema from /models/campground.js file 
+    Campground  = require("./models/campground"),
+    // Will clear every data from DB. (error driven code)
+    seedDB      = require("./seeds");
+
+// remove data from db
+seedDB();
 
 // use yelp_camp db if exists, if not, it will create yelp_camp db.
 // mongoose.connect("mongodb://localhost/yelp_camp");
@@ -18,9 +24,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // use campground schema
 // var Campground = require("./models/campground");
-
-
-
 
 // TEST db, add one data
 // Campground.create(

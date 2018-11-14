@@ -1,3 +1,8 @@
+#### S31-L275 YelpCamp V3.2  
+**Add Seeds File**  
+* Add a seeds.js file  
+* Run the seeds file everytime the server starts  
+
 #### S31-L274 YelpCamp V3  
 **Refactor Mongoose Code**  
 * Create models directory  
