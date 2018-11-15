@@ -105,17 +105,18 @@ app.get("/campgrounds/new", function(req, res){
 // shows more info about one campground
 app.get("/campgrounds/:id", function(req, res){
   // find the campground with the provided ID
-  Campground.findById(req.params.id, function(err, foundCampground){
+  // and populate with comments
+  Campground.findById(req.params.id).populate("comments").exec(function(err, foundCampground){
+  // Campground.findById(req.params.id, function(err, foundCampground){  
     if (err) {
       console.log(err);
     } else {
+      console.log(foundCampground);
       // render show template with that campground
       // res.send("THIS WILL BE THE SHOW PAGE SOON!");
       res.render("show", {campground: foundCampground});
     }
   });
-  
-  
 });
 
 

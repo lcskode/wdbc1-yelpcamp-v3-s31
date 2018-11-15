@@ -1,3 +1,8 @@
+#### S31-L277 YelpCamp V3.3
+**Add the comment model**  
+* Make our errors go away  
+* Display comments on campground show page  
+
 #### S31-L275 YelpCamp V3.2  
 **Add Seeds File**  
 * Add a seeds.js file  
